@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="heartCanvas"></canvas>
+    <div class="ambient-glow"></div>
+
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle background music">
+        <svg class="icon-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a7 7 0 0 1 0 9.9M17.9 4.1a11 11 0 0 1 0 15.8"></path>
+        </svg>
+        <span class="music-status">Music On</span>
+    </button>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Happy Birthday Cantik</h1>
+                <p class="hero-subtitle">Aku ada sedikit experience buat kamuu</p>
+                <button class="cta-button" id="exploreBtn">Klik disini</button>
+            </div>
+        </section>
+
+        <section class="candle-section" id="candleSection">
+            <div class="candle-container">
+                <h2>Buat Permintaan</h2>
+                <div class="cake-visual">
+                    <svg class="cake" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="100" width="200" height="60" fill="#d4a574" rx="5"></rect>
+                        <ellipse cx="150" cy="100" rx="100" ry="25" fill="#e8c4a0"></ellipse>
+                        <rect x="50" y="80" width="200" height="25" fill="#d9915f" rx="3"></rect>
+                        <ellipse cx="150" cy="80" rx="100" ry="12" fill="#e8a87a"></ellipse>
+                        <g id="candle-1" class="candle">
+                            <rect x="95" y="50" width="8" height="35" fill="#ffd966"></rect>
+                            <circle cx="99" cy="48" r="6" class="flame" id="flame-1"></circle>
+                        </g>
+                        <g id="candle-2" class="candle">
+                            <rect x="146" y="50" width="8" height="35" fill="#ffd966"></rect>
+                            <circle cx="150" cy="48" r="6" class="flame" id="flame-2"></circle>
+                        </g>
+                        <g id="candle-3" class="candle">
+                            <rect x="197" y="50" width="8" height="35" fill="#ffd966"></rect>
+                            <circle cx="201" cy="48" r="6" class="flame" id="flame-3"></circle>
+                        </g>
+                    </svg>
+                </div>
+                <div class="blow-controls">
+                    <button class="blow-button" id="blowBtn">🎂 Tiup Lilinnya</button>
+                    <p class="hint">Atau ga nyalain mic kalau diminta terus tiup lewat mic hp/laptop</p>
+                </div>
+                <button class="close-section" id="closeCandle">✕</button>
+            </div>
+        </section>
+
+        <section class="book-section" id="bookSection">
+            <div class="book-container">
+                <div id="flipbook">
+                    </div>
+
+                <div class="book-navigation">
+                    <button class="nav-button prev" id="prevBtn" aria-label="Previous page">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="nav-button next" id="nextBtn" aria-label="Next page">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="message-section">
+            <div class="message-box">
+                <h2>Sedikit Ucapan dari Aku</h2>
+                <p>Happy birthday sayangku yang paling cantik seduniaa. Aku doain semoga kamu selalu cantik dan selalu bisa seperti yang kamu mau. Aku harap kamu bisa terus sama aku dan ga akan pernah pisah. Di hari kamu yang special ini aku cuma bisa bilang, aku tidak akan ninggalin kamu sampai kapanpun. Jadi aku harap begitu juga dengan kamu ya sayang. Maaf kalau web nya cukup sederhana hehe, tapi aku ngebuatnya beneran dari hati aku ea, I Love You So Much Sayang. Sekali lagi, happy birthday babe🤍❤️🤍❤️</p>
+                <p class="signature">Forever yours,<br>❤️</p>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h2>Timeline Kita</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Awal Mula</div>
+                    <div class="timeline-content"><p>Hari dimana kita pertama kali ngobrol di discord berduaan</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Mulai tumbuh</div>
+                    <div class="timeline-content"><p>Masalah mulai muncul, tapi entah kenapa kita selalu ngelewatin semua masalah itu bareng-bareng</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sekarang</div>
+                    <div class="timeline-content"><p>Mungkin terlalu naif dan cepat kalau mau bilang sekarang sudah melewati semua fase. Tetapi setidaknya kita bakalan berusaha mempertahankan hubungan ini sampai kapan pun.</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <audio id="bgMusic" loop></audio>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="http://www.turnjs.com/lib/turn.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
